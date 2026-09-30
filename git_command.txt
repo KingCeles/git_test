@@ -1,0 +1,5 @@
+git clone (SSH from github)
+git push 
+git add (meaning we do the staging)
+git status (see the status staging, commited, modified)
+git log (see the history of commiting)
