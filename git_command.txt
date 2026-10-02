@@ -3,3 +3,43 @@ git push
 git add (meaning we do the staging)
 git status (see the status staging, commited, modified)
 git log (see the history of commiting)
+
+
+1. Remotes Configuration
+git remote -v: Lists all configured remote aliases and their URLs.
+
+git remote add upstream <URL>: Links your local repository to the original upstream project.
+
+git remote set-url origin <URL>: Changes the address of origin (e.g., fixing it to point to your personal fork).
+
+2. Branch Inspection & Navigation
+git branch: Lists local branches; the currently checked-out branch is marked with *.
+
+git branch -a: Lists all branches, including remote-tracking branches from both origin and upstream.
+
+git checkout <branch>: Switches your working tree to an existing local branch.
+
+git checkout -b <new-branch>: Creates a new local branch and immediately switches to it.
+
+git checkout --track <remote>/<branch>: Creates a local branch configured to track a specific remote branch.
+
+3. Staging & Committing Changes
+git status: Checks the state of your working directory, staged files, and branch tracking status.
+
+git add <file>: Adds file changes to the staging area.
+
+git commit -m "message": Commits staged changes to your local project history.
+
+4. Fetching, Merging & Syncing
+git fetch <remote>: Downloads commits, tags, and branches from a remote without modifying your working files.
+
+git merge <remote>/<branch>: Merges downloaded commits into your current active local branch.
+
+git pull <remote> <branch>: Downloads and immediately integrates remote commits (git fetch followed by git merge).
+
+git log HEAD..<remote>/<branch> --oneline: Lists incoming commits from the remote that your current branch does not have.
+
+5. Publishing Changes
+git push -u origin <branch> (or --set-upstream): Pushes a new local branch to your fork on GitHub and sets up persistent upstream tracking.
+
+git push: Pushes new commits on the current branch to its configured remote tracking branch.
